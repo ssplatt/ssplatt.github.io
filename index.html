@@ -5,7 +5,8 @@ layout: default
 <div class="home">
 
   <h1>Projects</h1>
-  [Kitchen::Linode](http://ssplatt.github.io/kitchen-linode/)
-  [Salt Infratest Execution Module](http://ssplatt.github.io/saltstack-infratest-module/)
+  {% for repository in site.github.public_repositories %}
+    * [{{ repository.name }}]({{ repository.html_url }})
+  {% endfor %}
 
 </div>
